@@ -48,7 +48,7 @@ L.HexbinLayer = (L.Layer ? L.Layer : L.Class).extend({
 			.y(function(d) { return d.point[1]; });
 
 		this._data = [];
-		this._colorScale = d3.scaleLinear()
+		this._colorScale = d3.scale.linear()
 			.range(this.options.colorRange)
 			.clamp(true);
 
@@ -406,7 +406,7 @@ L.PingLayer = (L.Layer ? L.Layer : L.Class).extend({
 			.domain([ 0, this.options.duration ])
 			.range([ 3, 15 ])
 			.clamp(true);
-		this._opacityScale = d3.scaleLinear()
+		this._opacityScale = d3.scale.linear()
 			.domain([ 0, this.options.duration ])
 			.range([ 1, 0 ])
 			.clamp(true);
