@@ -41,7 +41,7 @@ L.HexbinLayer = (L.Layer ? L.Layer : L.Class).extend({
 			.y(function(d) { return d.point[1]; });
 
 		this._data = [];
-		this._colorScale = d3.scaleLinear()
+		this._colorScale = d3.scale.linear()
 			.range(this.options.colorRange)
 			.clamp(true);
 
